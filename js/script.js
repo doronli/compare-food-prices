@@ -30,7 +30,7 @@
         $("#" + id).append(`
         <div class="col-lg-3 pl-0">
             <div class="item-card">
-                <img class="image-item" src="/images/${item.pictureName}" alt="">
+                <img class="image-item" src="images/${item.pictureName}" alt="">
                 <p class="name-item">${item.hebrewName}</p>
                 <p class="cost-osher-ad">
                     <span>מחיר באושר עד:</span>
