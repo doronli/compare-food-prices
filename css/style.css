@@ -1,0 +1,59 @@
+#compare-data .item-card,
+#favorite-items .item-card{
+    border: 1px solid #f3f3f3;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+#compare-data .image-item,
+#favorite-items .image-item{
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    border-bottom: 1px solid #f3f3f3;
+}
+#compare-data .item-card:hover .image-item,
+#favorite-items .item-card:hover .image-item{
+    transform: scale(0.95);
+}
+#compare-data .name-item,
+#favorite-items .name-item{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+#compare-data .cost-osher-ad,
+#favorite-items .cost-osher-ad{
+    padding-right: 15px;
+}
+#compare-data .cost-rami-levi,
+#favorite-items .cost-rami-levi{
+    padding-right: 15px;
+
+}
+#compare-data .cost,
+#favorite-items .cost{
+    font-weight: bold;
+}
+
+
+.checked{
+    color: yellow;
+}
+.fa-star{
+    font-size: 20px;
+    cursor: pointer;
+}
+.fa-star:hover{
+    color: yellow;
+}
+.alert{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
