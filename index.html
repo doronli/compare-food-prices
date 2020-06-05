@@ -9,6 +9,7 @@
     <!-- css files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,6 +32,11 @@
 
     <div class="container mt-5">
         <h2 class="text-center mb-4">השוואת מחירים בין אושר עד לרמי לוי באשדוד</h2>
+        <div class="col-lg-6 mx-auto ui-widget">
+            <input type="text" class="form-control mb-lg-5" id="input-search-item" placeholder="שם המוצר">
+            <p id="input-items-description"></p>
+        </div>
+        
         <div class="row" id="compare-data">
             
         </div>
@@ -43,11 +49,13 @@
     </div>
 
     <!-- external script -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
+    <!-- autocomplete -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- local script -->
     <script src="js/script.js"></script>
 

@@ -39,6 +39,18 @@
     font-weight: bold;
 }
 
+.img-serach{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: black;
+    font-weight: bold;
+}
 
 .checked{
     color: yellow;

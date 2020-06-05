@@ -21,14 +21,52 @@
   function showInfo(data, tabletop) {
     allData = data;
     buildData(data, "compare-data");
-   
-  }
 
+    $( "#input-search-item" ).autocomplete({
+      source: returnHebrewName(),
+      // minLength:2,   
+      // delay:500, 
+    //   search: function( event, ui ) {
+    //     console.log("search");
+    //     $( "#input-search-item" ).val( ui.item.hebrewName );
+    //        return false;
+    //  },
+     select: function( event, ui ) {
+        $( "#input-search-item" ).val( ui.item.label );
+        return false;
+     },
+     fucus: function( event, ui ) {
+      $( "#input-search-item" ).val( ui.item.label );
+      return false;
+    },
+
+  })
+  .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+    var inputText = $( "#input-search-item" ).val();
+    return $( "<li class='text-right'>" )
+    .append( `<img class="img-serach" src="images/${item.value.pictureName}"/> <span class='pl-5' class='mr-4'> ${item.value.hebrewName} </span>
+    <span class='pr-4'> ${item.value.costOsherAd} ש"ח </span>`)
+    .appendTo( ul );
+ };
+}
+
+  function returnHebrewName(){
+    let allHebrewName = [];
+    allData.forEach(item => {
+      allHebrewName.push(
+      {
+        label: item.hebrewName,
+        value: item
+      }
+        );
+    });
+    return allHebrewName;
+  }
   // build html from data
   function buildData(data, id){
     data.forEach(item => {
         $("#" + id).append(`
-        <div class="col-lg-3 pl-0">
+        <div class="col-6 col-md-4 col-lg-3 pl-0">
             <div class="item-card">
                 <img class="image-item" src="images/${item.pictureName}" alt="">
                 <p class="name-item">${item.hebrewName}</p>
@@ -122,4 +160,11 @@
     removeItemFromArray(itemId);
     $("#favorite-items").html('');
     loadFavoriteItem();
-  })
+  });
+
+
+
+  // fetch('https://www.rami-levy.co.il/he/shop/')
+  // .then(data => console.log(data));
+
+ 
